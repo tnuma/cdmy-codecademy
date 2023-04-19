@@ -1,0 +1,140 @@
+/* common */
+html {
+  /* font-size: 17px; */
+  font-family: 'JetBrains Mono', monospace;
+}
+
+h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin: 1rem auto;
+}
+
+.dark-mode {
+	background-color: #24272d;
+	color: #a1a9b7;
+	transition: background-color 1s ease;
+}
+
+.light-mode {
+	background-color: #fff;
+	color: black;
+	transition: background-color 1s ease;
+}
+
+.flex-container {
+	display: flex;
+}
+
+.nest-list li {
+  list-style-type: circle;
+  margin-left: 2rem;
+}
+
+a {
+  cursor: pointer;
+}
+
+a:hover {
+  color: #fff;
+}
+
+/* header */
+header {
+	padding: 0 1rem;
+	background-color: lightslategrey;
+	color: lightgrey;
+}
+
+.header.flex-container {
+	justify-content: space-between;
+}
+
+header h1 {
+	font-size: 3rem;
+}
+
+span {
+	display: block;
+}
+
+header button {
+	display: inline-block;
+}
+
+.toggle-menu button {
+	padding-left: 1rem;
+}
+
+nav {
+  display: none;
+}
+
+nav.show {
+  display: block;
+}
+
+nav .flex-container {
+	justify-content: space-around;
+}
+
+nav li {
+	margin: 0.8rem 0;
+}
+
+/* main */
+main {
+  margin-top: 1rem;
+}
+
+section {
+  width: 90%;
+  margin: 0 auto;
+}
+
+section a {
+  color: rgb(82, 165, 232);
+  text-decoration: underline;
+}
+
+/* about */
+.paragraph {
+  display: inline;
+  color: rgb(140, 188, 115);
+}
+
+.name {
+  color: rgb(240, 144, 96);
+}
+
+.goal {
+  color: rgb(222, 97, 107);
+}
+
+.about p {
+  line-height: 1.4rem;
+}
+
+.about p+p {
+  margin-left: 1rem;
+}
+
+img {
+  display: block;
+  width: 3rem;
+}
+
+.skill-icons {
+  /* display: inline-block; */
+  margin: 0 auto;
+}
+
+/* Projects */
+ul {
+  list-style-position: inside;
+}
+
+.projects ul li {
+  list-style-type: disc;
+  line-height: 1.4rem;
+}
