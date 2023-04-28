@@ -38,16 +38,16 @@
 			</div>
 			<nav>
 				<ul class="flex-container">
-					<li><a href="#">AboutMe</a></li>
-					<li><a href="#">Projects</a></li>
-					<li><a href="#">Skills</a></li>
-					<li><a href="#">Contact</a></li>
+					<li><a href="#about">AboutMe</a></li>
+					<li><a href="#projects">Projects</a></li>
+					<li><a href="#skills">Skills</a></li>
+					<li><a href="#contact">Contact</a></li>
 				</ul>
 			</nav>
 		</header>
 
 		<main>
-			<section class="about">
+			<section id="about" class="about">
 				<h2>AboutMe</h2>
 				<div class="flex-container">
 					<p>></p>
@@ -65,16 +65,43 @@
 						creative projects that help me continue to learn and
 						grow.
 					</p>
+					<img
+						src="https://blush.design/api/download?shareUri=AU3htaF1atUJtEoN&c=Bottom_0%7E393f82_Hair_0%7E2c1b18_Skin_0%7Edcae92_Top_0%7Eff4133&w=800&h=800&fm=png"
+						alt="profile picture" class="profile"/>
 				</div>
 			</section>
-			<section class="projects">
+
+			<section id="projects" class="projects">
 				<h2>Projects</h2>
-				<ul>
+				<ul class="desktop-project">
 					<li class="project">
-						<p class="project-title">
-              country-region-guessor
-            </p>
-            <img src="src/country-region-guessor.gif" alt="" class="gif">
+						<p class="project-title">country-region-guessor</p>
+						<section class="country-region-guessor">
+							<p>
+								Guess a country's region. Get 5 correct answers
+								to win, but 5 incorrect answers and you lose.
+								Good luck!
+							</p>
+							<div class="flex-container result">
+								<p class="result-text">
+									Correct:<span id="correct-count">0</span>
+									Wrong:<span id="wrong-count">0</span>
+								</p>
+								<p class="wl none">You Won!</p>
+								<p class="wl none">You Lose!</p>
+							</div>
+							<div id="question">
+								<p id="question-sentence"></p>
+							</div>
+							<div class="flex-container select">
+								<button id="correct">Correct</button>
+								<button id="wrong">Wrong</button>
+								<button id="reset" class="none">Retry</button>
+							</div>
+							<div class="answer">
+								<p id="judge"></p>
+							</div>
+						</section>
 						<ul class="nest-list">
 							<li>
 								<a
@@ -82,31 +109,29 @@
 									>Try from CLI</a
 								>
 							</li>
-							<li><a href="#">Try on Browser</a></li>
 						</ul>
 					</li>
 					<li class="project">
-            <p class="project-title">
-              sample-web-site
-            </p>
+						<p class="project-title">sample-web-site</p>
 						<ul class="nest-list">
 							<li>
 								<a
 									href="https://tnuma.github.io/cdmy-flexbox-business-site/"
-									>example 1</a
+									>responsive-site-sample</a
 								>
 							</li>
 							<li>
 								<a
 									href="https://tnuma.github.io/cdmy-fotomatic/"
-									>example 2</a
+									>desktop-site-sample</a
 								>
 							</li>
 						</ul>
 					</li>
 				</ul>
 			</section>
-			<section class="skills">
+
+			<section id="skills" class="skills">
 				<h2>Skills</h2>
 				<div class="skill-icons flex-container">
 					<div class="skill">
@@ -119,25 +144,45 @@
 						<img
 							src="https://img.icons8.com/stickers/256/css3.png"
 							alt="" />
-              <p>CSS</p>
+						<p>CSS</p>
 					</div>
 					<div class="skill">
 						<img
 							src="https://img.icons8.com/color/256/javascript--v1.png"
 							alt="" />
-              <p>JavaScript</p>
+						<p>JavaScript</p>
 					</div>
 				</div>
 			</section>
-			<section class="contacts">
+
+			<section id="contact" class="contacts">
 				<h2>Contacts</h2>
-				<img
-					src="https://img.icons8.com/windows/256/github.png"
-					alt="" />
+				<form action="/contact.js" method="POST">
+					<label for="name">Name</label>
+					<br />
+					<input type="text" id="name" name="name" required />
+					<br />
+					<label for="email">e-mail</label>
+					<br />
+					<input type="email" name="email" required />
+					<br />
+					<label for="contents">How can I help you?</label>
+					<br />
+					<textarea
+						name="contents"
+						id="contents"
+						cols="30"
+						rows="10"></textarea>
+					<br />
+					<input type="button" value="Submit" class="submit-button" />
+				</form>
 			</section>
 		</main>
 
-		<footer></footer>
+		<footer>
+			<p>&copy; 2023 tuma.tech</p>
+		</footer>
 		<script src="main.js"></script>
+		<script src="guess.js"></script>
 	</body>
 </html>
